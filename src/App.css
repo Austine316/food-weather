@@ -1,39 +1,235 @@
-.App {
+.Container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 0rem;
+  box-shadow: 2px 0 5px rgb(0 0 0 / 50%);
+  box-sizing: border-box;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.navLinkContainer {
+  background-color: rgb(44, 44, 44);
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.navLink {
+  color: whitesmoke;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navLinkActive {
+  font-weight: 500px;
+  color: orange;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form input {
+  width: 80%;
+  padding: 0.8rem 0rem 0.8rem 1.2rem;
+  outline: none;
+  border: none;
+  font-size: large;
+  margin: auto;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background-color: rgba(202, 200, 200, 0.5);
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: #313131;
+  transition: 0.4s ease-out;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+form input:focus {
+  background-color: rgba(240, 240, 240, 0.6);
 }
 
-.App-header {
+.recipeGallery {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1rem;
+  grid-column-gap: 0.5rem;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.recipeItem {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #f2f2f296;
+  padding-bottom: 1rem;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+.recipeItem a:hover {
+  color: tomato;
+}
+
+@media screen and (max-width: 766px) {
+  .recipeGallery {
+    grid-template-columns: 1fr;
   }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+}
+
+.recipeDetails {
+  background-color: whitesmoke;
+  padding: 0rem 0rem 0rem 0.5rem;
+}
+.recipeDetails h4 {
+  color: #545454;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.recipeDetails span {
+  color: #888;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.recipeDetails strong {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.recipeImageContainer {
+  height: 230px;
+  text-align: center;
+}
+
+.recipeImageContainer img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 230px;
+}
+
+.recipeDetails h1 {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+li {
+  list-style-type: square;
+}
+
+.recipeContainer {
+  max-width: 700px;
+  margin: auto;
+}
+
+.weatherContainer {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  background-image: url(../src/coldbg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  transition: 2s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.weatherContainer.warm {
+  background-image: url(../src/warmbg.jpg);
+}
+
+main {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+  padding: 25px;
+}
+
+.weatherSearchBox {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.weatherSearchBox .weatherSearchbar {
+  display: block;
+  width: 100%;
+  padding: 1.3rem 0rem 1.3rem 1rem;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px 0px 16px 16px;
+  margin-top: -15px;
+  margin-bottom: 0;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: #313131;
+  font-size: 20px;
+  transition: 0.4s ease-out;
+}
+
+.weatherSearchBox .weatherSearchbar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.locationBox .location {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.locationBox .date {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.weatherBox {
+  text-align: center;
+}
+
+.weatherBox .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 102px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weatherBox .weather {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
