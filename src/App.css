@@ -150,8 +150,15 @@ li {
   background-image: url(../src/warmbg.jpg);
 }
 
+@media screen and (max-width: 766px) {
+  .weatherSearchBox .weatherSearchbar {
+    padding: 0.1rem 0rem 0.1rem 1rem;
+    max-height: 10px;
+  }
+}
+
 main {
-  height: 100vh;
+  height: 80vh;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.2),
@@ -161,8 +168,9 @@ main {
 }
 
 .weatherSearchBox {
-  width: 100%;
-  margin: 0 0 75px;
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
 .weatherSearchBox .weatherSearchbar {
@@ -198,6 +206,12 @@ main {
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
+@media screen and (max-width: 766px) {
+  .locationBox .location {
+    font-size: 27px;
+  }
+}
+
 .locationBox .date {
   color: #fff;
   font-size: 20px;
@@ -205,6 +219,12 @@ main {
   font-style: italic;
   text-align: center;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+@media screen and (max-width: 766px) {
+  .locationBox .date {
+    font-size: 15px;
+  }
 }
 
 .weatherBox {
@@ -227,9 +247,21 @@ main {
   box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 766px) {
+  .weatherBox .temp {
+    font-size: 97px;
+  }
+}
+
 .weatherBox .weather {
   color: #fff;
   font-size: 40px;
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+@media screen and (max-width: 766px) {
+  .weatherBox .weather {
+    font-size: 35px;
+  }
 }
