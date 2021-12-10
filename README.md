@@ -1,1 +1,1 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This App was created in React and deployed in Heroku. Using API request, you can search weather forecast and food recipe. Enjoy! Link [here](https://weather-recipe.herokuapp.com/).
